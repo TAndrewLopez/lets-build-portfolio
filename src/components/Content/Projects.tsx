@@ -10,12 +10,13 @@ const Projects = () => {
         </p>
         <h2 className="py-4">What I've Built</h2>
         <div className="grid gap-8 md:grid-cols-2">
-          {PROJECT_DATA.map(({ bgImage, projectURL, title }) => (
+          {PROJECT_DATA.map(({ bgImage, projectURL, title, technologies }) => (
             <ProjectItem
               title={title}
               bgImage={bgImage}
               projectURL={projectURL}
               key={title}
+              technologies={technologies}
             />
           ))}
         </div>

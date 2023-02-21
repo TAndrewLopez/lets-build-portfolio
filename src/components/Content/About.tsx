@@ -18,7 +18,7 @@ const About = () => {
           <p className="py-2 text-gray-600">
             I could attribute my interest for tech to when I purchased the first
             iPhone in 2007. It led me to discovering something called
-            "jailbreaking," which installed 3rd party applications on the iPhone
+            "jailbreaking", which installed 3rd party applications on the iPhone
             before it had an app store. Back then, I was only utilizing these
             tools to help cater my user experience. Today, I find myself
             building modern web solutions with a strong focus on delivering the
