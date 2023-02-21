@@ -3,10 +3,10 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const SOCIAL_LINKS = [
-  { Icon: <FaLinkedin /> },
-  { Icon: <FaGithub /> },
-  { Icon: <AiOutlineMail /> },
-  { Icon: <BsFillPersonLinesFill /> },
+  { Icon: <FaLinkedin size={20} color="#5651e5" /> },
+  { Icon: <FaGithub size={20} color="#5651e5" /> },
+  { Icon: <AiOutlineMail size={20} color="#5651e5" /> },
+  { Icon: <BsFillPersonLinesFill size={20} color="#5651e5" /> },
 ];
 
 interface SocialsProps {

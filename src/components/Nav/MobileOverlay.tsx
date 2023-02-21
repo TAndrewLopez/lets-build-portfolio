@@ -25,12 +25,14 @@ const MobileOverlay: React.FC<MobileOverlayProps> = ({
       {/* NAV HEADER */}
       <div>
         <div className="flex items-center justify-between w-full">
-          <Image
-            src="/assets/logo-image.png"
-            alt="nav logo"
-            width="87"
-            height="35"
-          />
+          <Link href="/#home" scroll={false}>
+            <Image
+              src="/assets/alt-logo-image.png"
+              alt="nav logo"
+              width="87"
+              height="35"
+            />
+          </Link>
           <div
             className="p-3 rounded-full shadow-lg cursor-pointer shadow-gray-400"
             onClick={handleNav}>
@@ -47,7 +49,11 @@ const MobileOverlay: React.FC<MobileOverlayProps> = ({
         {/* NAV LINKS */}
         <ul className="flex flex-col py-4 uppercase">
           {navLinks.map((item) => (
-            <Link href={item.path} key={item.name}>
+            <Link
+              onClick={handleNav}
+              href={item.path}
+              key={item.name}
+              scroll={false}>
               <li className="py-4 text-sm">{item.name}</li>
             </Link>
           ))}

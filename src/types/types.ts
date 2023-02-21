@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image'
 import { ReactNode } from 'react'
 
 export interface NAV_LINKS {
@@ -7,4 +8,13 @@ export interface NAV_LINKS {
 
 export interface SOCIAL_LINKS {
     Icon: ReactNode
+}
+
+export interface ProjectData {
+    title: string,
+    bgImage: StaticImageData,
+    projectURL: string,
+    technologies: Array<string>,
+    screenshot: StaticImageData
+    excerpt: string
 }

@@ -5,7 +5,7 @@ interface ProjectItemProps {
   title: string;
   bgImage: StaticImageData;
   projectURL: string;
-  technologies: string;
+  technologies: Array<string>;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({

@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import contactImage from "../../../public/assets/contact.jpg";
 import ContactForm from "../Form/ContactForm";
-import Socials from "../Navbar/Socials";
+import Socials from "../Nav/Socials";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 
 const Contact = () => {
   return (
-    <div className="w-full lg:h-screen">
+    <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
@@ -24,7 +24,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className="py-2">Name Here</h2>
+                <h2 className="py-2">Andrew Dobson</h2>
                 <p>Fullstack Web Developer</p>
                 <p className="py-4">
                   I'm always willing to discuss potential opportunities to work
@@ -43,7 +43,7 @@ const Contact = () => {
           <ContactForm />
         </div>
         <div className="flex justify-center py-12">
-          <Link href="/">
+          <Link href="/#home" scroll={false}>
             <div className="p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-110">
               <HiOutlineChevronDoubleUp size={30} className="text-[#5651e5]" />
             </div>
