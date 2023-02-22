@@ -7,9 +7,16 @@ const ContactForm = () => {
   const subjectRef = useRef<HTMLInputElement>(null);
   const msgRef = useRef<HTMLTextAreaElement>(null);
 
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const handleSubmit = (evt: React.SyntheticEvent<HTMLFormElement>) => {
     evt.preventDefault();
-
     if (
       nameRef.current &&
       phoneRef.current &&
@@ -22,7 +29,20 @@ const ContactForm = () => {
       const { value: email } = emailRef.current;
       const { value: subject } = subjectRef.current;
       const { value: msg } = msgRef.current;
-      console.log({ name, phone, email, subject, msg });
+      const myForm = {
+        name,
+        phone,
+        email,
+        subject,
+        msg,
+      };
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...myForm }),
+      })
+        .then((res) => console.log("form submitted successfully", res))
+        .catch((err) => alert(err));
     }
   };
 
