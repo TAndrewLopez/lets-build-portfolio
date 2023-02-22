@@ -28,8 +28,9 @@ const Socials: React.FC<SocialsProps> = ({ pad, scale }) => {
       {SOCIAL_LINKS.map((item, i) => (
         <div
           className={`p-${pad} duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-${scale}`}
-          key={i}>
-          <a onClick={() => window.open(item.path, "_blank")}>{item.Icon}</a>
+          key={i}
+          onClick={() => window.open(item.path, "_blank")}>
+          <a>{item.Icon}</a>
         </div>
       ))}
     </>

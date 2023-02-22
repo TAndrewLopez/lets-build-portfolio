@@ -54,7 +54,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // TODO: BASED ON THE PATH CHANGE SOME STYLES
   return (
     <div
       style={{ backgroundColor: `${navBG}` }}
@@ -71,10 +70,12 @@ const Navbar = () => {
           />
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
+          <ul
+            style={{ color: `${linkColor}` }}
+            className="hidden md:flex md:gap-8">
             {NAV_LINKS.map((item) => (
               <Link href={item.path} key={item.name} scroll={false}>
-                <li className="ml-10 text-sm uppercase hover:border-b hover:border-b-[#5651e5]">
+                <li className="text-sm uppercase hover:border-b hover:border-b-[#5651e5]">
                   {item.name}
                 </li>
               </Link>
