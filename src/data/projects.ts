@@ -37,7 +37,7 @@ export const PROJECT_DATA = [
         title: "Linkuistix",
         bgImage: linkuistixScreenshot,
         projectURL: "/linkuistix",
-        technologies: ["Tensorflow.js", "JavaScript", "Pixi.js", "React", "Firebase"],
+        technologies: ["Tensorflow.js", "Pixi.js", "JavaScript", "React", "Firebase"],
         screenshot: linkuistixBanner,
         liveSite: "https://linkuistix.com/game",
         github: "https://github.com/DrTeethCapstone/Linkuistix",

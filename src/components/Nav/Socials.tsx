@@ -11,8 +11,10 @@ const SOCIAL_LINKS = [
     Icon: <FaGithub size={20} color="#5651e5" />,
     path: "https://github.com/TAndrewLopez?tab=repositories",
   },
-  { Icon: <AiOutlineMail size={20} color="#5651e5" /> },
-  { Icon: <BsFillPersonLinesFill size={20} color="#5651e5" /> },
+  {
+    Icon: <AiOutlineMail size={20} color="#5651e5" />,
+    path: "mailto:tandrewlopez@gmail.com",
+  },
 ];
 
 interface SocialsProps {
@@ -27,7 +29,7 @@ const Socials: React.FC<SocialsProps> = ({ pad, scale }) => {
         <div
           className={`p-${pad} duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-${scale}`}
           key={i}>
-          <a>{item.Icon}</a>
+          <a onClick={() => window.open(item.path, "_blank")}>{item.Icon}</a>
         </div>
       ))}
     </>
