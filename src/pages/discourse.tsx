@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { PROJECT_DATA } from "@/data/projects";
 import { ProjectData } from "@/types/types";
 import { RiRadioButtonFill } from "react-icons/ri";
+import Link from "next/link";
 
 const discourse = () => {
   const [project, setProject] = useState<ProjectData | null>(null);
@@ -36,19 +37,25 @@ const discourse = () => {
           </div>
           <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
             <div className="col-span-4">
-              <p>Project</p>
-              <h2>Overview</h2>
-              <p>
-                Possibly list off, why I enjoyed doing this project. Why I chose
-                this project. What obstacles you faced. What you learned. etc.
-              </p>
-              <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-              <button className="px-8 py-2 mt-4">Code</button>
+              <p>{project.title}</p>
+              <h2 className="py-2">Overview</h2>
+              <p className="py-2">{project.intro}</p>
+              <p>{project.details}</p>
+              <button
+                className="px-8 py-2 mt-4 mr-8"
+                onClick={() => window.open(project.liveSite, "_blank")}>
+                Demo
+              </button>
+              <button
+                className="px-8 py-2 mt-4"
+                onClick={() => window.open(project.github, "_blank")}>
+                Code
+              </button>
             </div>
             <div className="col-span-4 p-4 shadow-xl md:col-span-1 shadow-gray-400 rounded-xl">
               <div className="p-2">
                 <p className="pb-2 font-bold text-center">Technologies</p>
-                <div>
+                <div className="grid grid-cols-3 md:grid-cols-1">
                   {project.technologies.map((tech) => (
                     <p
                       className="flex items-center py-2 text-gray-600"
@@ -60,6 +67,9 @@ const discourse = () => {
                 </div>
               </div>
             </div>
+            <Link href="/#projects" scroll={false}>
+              <p className="underline cursor-pointer">Back</p>
+            </Link>
           </div>
         </>
       )}

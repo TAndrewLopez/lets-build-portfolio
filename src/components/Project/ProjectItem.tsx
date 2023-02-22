@@ -26,7 +26,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
         <h3 className="text-2xl tracking-wider text-center text-white">
           {title}
         </h3>
-        <p className="pt-2 pb-4 text-center text-white">{technologies}</p>
+        <p className="pt-2 pb-4 text-center text-white">
+          {technologies.join(" | ")}
+        </p>
         <Link href={projectURL}>
           <p className="py-3 text-lg font-bold text-center text-gray-700 bg-white rounded-lg cursor-pointer">
             More Info

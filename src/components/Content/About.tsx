@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -24,9 +25,11 @@ const About = () => {
             building modern web solutions with a strong focus on delivering the
             best user experience without sacrificing valued features.
           </p>
-          <p className="py-2 text-gray-600 underline cursor-pointer">
-            Check out some of my latest projects.
-          </p>
+          <Link href="/#projects" scroll={false}>
+            <p className="py-2 text-gray-600 underline cursor-pointer">
+              Check out some of my latest projects.
+            </p>
+          </Link>
         </div>
         <div className="flex items-center justify-center w-full h-auto p-4 m-auto duration-300 ease-in shadow-xl shadow-gray-400 rounded-xl hover:scale-105">
           <Image

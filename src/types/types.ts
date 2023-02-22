@@ -11,10 +11,14 @@ export interface SOCIAL_LINKS {
 }
 
 export interface ProjectData {
+    id: number,
     title: string,
     bgImage: StaticImageData,
     projectURL: string,
     technologies: Array<string>,
     screenshot: StaticImageData
-    excerpt: string
+    liveSite: string,
+    github: string,
+    intro: string,
+    details: string,
 }

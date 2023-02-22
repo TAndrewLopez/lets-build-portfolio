@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import MobileOverlay from "./MobileOverlay";
@@ -15,10 +16,28 @@ const NAV_LINKS = [
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBG, setNavBG] = useState("#ecf0f3");
+  const [linkColor, setLinkColor] = useState("#1f2937");
+  const router = useRouter();
 
   const handleNav = () => {
     setNav(!nav);
   };
+
+  useEffect(() => {
+    if (
+      router.asPath === "/discourse" ||
+      router.asPath === "/genRecords" ||
+      router.asPath === "/linkuistix" ||
+      router.asPath === "/archived"
+    ) {
+      setNavBG("transparent");
+      setLinkColor("#ecf0f3");
+    } else {
+      setNavBG("#ecf0f3");
+      setLinkColor("#1f2937");
+    }
+  }, [router]);
 
   useEffect(() => {
     const handleShadow = () => {
@@ -38,6 +57,7 @@ const Navbar = () => {
   // TODO: BASED ON THE PATH CHANGE SOME STYLES
   return (
     <div
+      style={{ backgroundColor: `${navBG}` }}
       className={
         shadow ? "fixed z-50 w-full h-20 shadow-xl" : "fixed z-50 w-full h-20"
       }>
@@ -51,17 +71,17 @@ const Navbar = () => {
           />
         </Link>
         <div>
-          <ul className="hidden md:flex">
+          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             {NAV_LINKS.map((item) => (
               <Link href={item.path} key={item.name} scroll={false}>
-                <li className="ml-10 text-sm uppercase hover:border-b">
+                <li className="ml-10 text-sm uppercase hover:border-b hover:border-b-[#5651e5]">
                   {item.name}
                 </li>
               </Link>
             ))}
           </ul>
           <div className="md:hidden" onClick={handleNav}>
-            <AiOutlineMenu size={25} />
+            <AiOutlineMenu color={`${linkColor}`} size={25} />
           </div>
         </div>
       </div>
