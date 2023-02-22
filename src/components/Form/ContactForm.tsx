@@ -1,6 +1,8 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const ContactForm = () => {
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const nameRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -28,21 +30,31 @@ const ContactForm = () => {
       const { value: phone } = phoneRef.current;
       const { value: email } = emailRef.current;
       const { value: subject } = subjectRef.current;
-      const { value: msg } = msgRef.current;
+      const { value: message } = msgRef.current;
       const myForm = {
         name,
         phone,
         email,
         subject,
-        msg,
+        message,
       };
+
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...myForm }),
       })
-        .then((res) => console.log("form submitted successfully", res))
+        .then(() => {
+          setShowSuccess(true);
+          setTimeout(() => setShowSuccess(false), 2500);
+        })
         .catch((err) => alert(err));
+
+      nameRef.current.value = "";
+      phoneRef.current.value = "";
+      emailRef.current.value = "";
+      subjectRef.current.value = "";
+      msgRef.current.value = "";
     }
   };
 
@@ -107,6 +119,11 @@ const ContactForm = () => {
               required
             />
           </div>
+          {showSuccess && (
+            <span className="float-right mt-3 text-xl font-semibold text-green-500">
+              Submission successful.
+            </span>
+          )}
           <button className="w-full p-4 mt-4 text-gray-100">
             Send Message
           </button>
