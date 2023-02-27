@@ -10,18 +10,6 @@ import archivedScreenshot from 'public/assets/projects/screenshots/archivedScree
 export const PROJECT_DATA = [
     {
         id: 1,
-        title: "Discourse - Reddit Clone",
-        bgImage: discourseScreenshot,
-        projectURL: "/discourse",
-        technologies: ["Next.js", "TypeScript", "Firebase", "CharkraUI", "Recoil"],
-        screenshot: discourseBanner,
-        liveSite: "https://discourse-forum.vercel.app/",
-        github: "https://github.com/TAndrewLopez/discourse",
-        intro: "The goal of this project was to write production ready code, focusing on readable/reusable components as well as keeping the codebase DRY. In addition, I integrated some new-to-me technologies like Recoil and ChakraUI that changed the way I approached the build process.",
-        details: "Discourse (Reddit Clone) is a social forum website where users can create and join communities, as well as post and interact with other users' post. It uses Firebase for authentication and storing collections of comments, communities, posts, and users. It also utilizes Firebase's Firestore for storing images."
-    },
-    {
-        id: 2,
         title: "Gen Records",
         bgImage: genRecordsScreenshot,
         projectURL: "/genRecords",
@@ -33,7 +21,7 @@ export const PROJECT_DATA = [
         details: "Gen Records is a E-Commerce website focused on Vinyls. Users can search and sort by keywords, genres, and artists as well as add items to their cart and proceed to checkout using Stripe. Administrators have access to a protected dashboard with protected routes for CRUD operations for inventory and user information.",
     },
     {
-        id: 3,
+        id: 2,
         title: "Linkuistix",
         bgImage: linkuistixScreenshot,
         projectURL: "/linkuistix",
@@ -43,6 +31,18 @@ export const PROJECT_DATA = [
         github: "https://github.com/DrTeethCapstone/Linkuistix",
         intro: "Linkuistix took everything I knew about web development and flipped it on it's side. This project was designed using Object Oriented Programming where objects interacted with each other and managed their own state. I witnessed first hand the power of JavaScripts' Class constructors where I built custom objects that inherited properties from Pixi.js elements. This meant that all through development I was able to focus on the games features and functionalities rather than the logic necessary to manage and display content on the screen.",
         details: "Likuistix is a word association game built upon a pre-trained AI model available from the TensorFlow Hub. Players are presented a target word and are required to submit an associated word to score points before their time runs out.",
+    },
+    {
+        id: 3,
+        title: "Discourse - Reddit Clone",
+        bgImage: discourseScreenshot,
+        projectURL: "/discourse",
+        technologies: ["Next.js", "TypeScript", "Firebase", "CharkraUI", "Recoil"],
+        screenshot: discourseBanner,
+        liveSite: "https://discourse-forum.vercel.app/",
+        github: "https://github.com/TAndrewLopez/discourse",
+        intro: "The goal of this project was to write production ready code, focusing on readable/reusable components as well as keeping the codebase DRY. In addition, I integrated some new-to-me technologies like Recoil and ChakraUI that changed the way I approached the build process.",
+        details: "Discourse (Reddit Clone) is a social forum website where users can create and join communities, as well as post and interact with other users' post. It uses Firebase for authentication and storing collections of comments, communities, posts, and users. It also utilizes Firebase's Firestore for storing images."
     },
     {
         id: 4,
