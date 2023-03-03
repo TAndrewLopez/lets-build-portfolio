@@ -20,5 +20,5 @@ export interface ProjectData {
     liveSite: string,
     github: string,
     intro: string,
-    details: string,
+    keyFeatures: string[],
 }

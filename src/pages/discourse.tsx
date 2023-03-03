@@ -40,7 +40,13 @@ const discourse = () => {
               <p>{project.title}</p>
               <h2 className="py-2">Overview</h2>
               <p className="py-2">{project.intro}</p>
-              <p>{project.details}</p>
+              <ul>
+                {project.keyFeatures.map((feature) => (
+                  <li className="flex items-center py-2">
+                    <RiRadioButtonFill className="mr-1.5" /> {feature}
+                  </li>
+                ))}
+              </ul>
               <button
                 className="px-8 py-2 mt-4 mr-8"
                 onClick={() => window.open(project.liveSite, "_blank")}>

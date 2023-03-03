@@ -17,8 +17,16 @@ export const PROJECT_DATA = [
         screenshot: genRecordsBanner,
         liveSite: "https://gen-records.vercel.app/",
         github: "https://github.com/TAndrewLopez/gen_records_nextjs",
-        intro: "This project was one of the first times working with the Next.js framework. One of the big changes was the way I approached using middleware functions to protect specific routes. Also, was the first time working with the Spotify API which required some custom logic for authentication.",
-        details: "Gen Records is a E-Commerce website focused on Vinyls. Users can search and sort by keywords, genres, and artists as well as add items to their cart and proceed to checkout using Stripe. Administrators have access to a protected dashboard with protected routes for CRUD operations for inventory and user information.",
+        intro: "This project showcases my ability to use a variety of technologies to create a robust and user-friendly e-commerce website, as well as my skills in problem-solving, API integration, and database management.",
+        keyFeatures: [
+            "Developed a fully functional e-commerce website using Next.js and Redux to handle state management and user authentication.",
+            "Integrated Stripe API for secure payment processing, allowing customers to easily checkout with their preferred payment method.",
+            "Implemented Postgresql database to store and manage product information, customer data, and order details.",
+            "Designed and styled the website using Tailwindcss to create a modern and responsive user interface.",
+            "Utilized Next.js server-side rendering and optimized images to improve website performance and loading times.",
+            "Implemented search and filtering functionality to improve the user experience and enable customers to find products more easily.",
+            "Developed a custom CMS using Next.js and Postgresql to allow administrators to easily manage product information and inventory levels."
+        ],
     },
     {
         id: 2,
@@ -29,8 +37,13 @@ export const PROJECT_DATA = [
         screenshot: linkuistixBanner,
         liveSite: "https://linkuistix.com/game",
         github: "https://github.com/DrTeethCapstone/Linkuistix",
-        intro: "Linkuistix took everything I knew about web development and flipped it on it's side. This project was designed using Object Oriented Programming where objects interacted with each other and managed their own state. I witnessed first hand the power of JavaScripts' Class constructors where I built custom objects that inherited properties from Pixi.js elements. This meant that all through development I was able to focus on the games features and functionalities rather than the logic necessary to manage and display content on the screen.",
-        details: "Likuistix is a word association game built upon a pre-trained AI model available from the TensorFlow Hub. Players are presented a target word and are required to submit an associated word to score points before their time runs out.",
+        intro: "This projects demonstrates my ability to work with a range of technologies to build a complex web application as well as my ability to collaborate on a team to deliver a high-quality product. Linkuistix was designed using Object Oriented Programming utilizing the power of JavaScripts' Class constructors to build custom objects that inherited properties from Pixi.js elements. This meant that all through development I was able to focus on the games features and functionalities rather than the logic necessary to manage and display content on the screen.",
+        keyFeatures: [
+            "Designed and developed a web-based word association game using TensorFlow.js, Pixi.js, JavaScript, Firebase, and React.",
+            "Implemented Firebase Authentication and Realtime Database to handle user login and track user scores.",
+            "Utilized Pixi.js to create high-quality graphics and animations, enhancing the overall visual experience of the game.",
+            "Collaborated with a team of designers and developers to develop and refine the game's concept and user interface."
+        ],
     },
     {
         id: 3,
@@ -41,8 +54,16 @@ export const PROJECT_DATA = [
         screenshot: discourseBanner,
         liveSite: "https://discourse-forum.vercel.app/",
         github: "https://github.com/TAndrewLopez/discourse",
-        intro: "The goal of this project was to write production ready code, focusing on readable/reusable components as well as keeping the codebase DRY. In addition, I integrated some new-to-me technologies like Recoil and ChakraUI that changed the way I approached the build process.",
-        details: "Discourse (Reddit Clone) is a social forum website where users can create and join communities, as well as post and interact with other users' post. It uses Firebase for authentication and storing collections of comments, communities, posts, and users. It also utilizes Firebase's Firestore for storing images."
+        intro: "This project demonstrates my ability to write reuseable and maintainable components as well as my skills in user interface design, data management, and client-side state management.",
+        keyFeatures: [
+            "Designed and developed a Reddit clone web application using Next.js, TypeScript, Firebase, Chakra UI, and Recoil.",
+            "Implemented Firebase Authentication and Firestore to handle user authentication and store posts and comments.",
+            "Utilized Chakra UI to create a visually appealing and user-friendly interface, improving the overall user experience.",
+            "Implemented client-side state management using Recoil to improve performance and make the application more responsive.",
+            "Developed custom hooks and reusable components to improve code reusability and maintainability.",
+            "Utilized server-side rendering to improve SEO and website performance.",
+            "Developed a RESTful API using Firebase Functions to handle voting and comment features.",
+        ]
     },
     {
         id: 4,
@@ -53,7 +74,19 @@ export const PROJECT_DATA = [
         screenshot: archivedBanner,
         liveSite: "Being a fullstack web developer",
         github: "https://github.com/TAndrewLopez/BlogWebsite",
-        intro: "As a Fullstack Web Developer, optimizing applications for all platforms is a serious concern. Therefore, I've increasingly interested in getting hands on with GraphQL since it allows for querying an API for exactly the data needed.",
-        details: "Archived is a lightweight Blog Website that details some of my interest and experiences. Visitors are able to browse and interact with posts.",
+        intro: "Archived is a lightweight Blog Website that details some of my interest and experiences. It highlights my skills in API development and user interface design.",
+        keyFeatures: [
+            "Designed and developed a personal blog website using Next.js, TypeScript, GraphQL, Hygraph, and Tailwindcss.",
+            "Utilized Next.js server-side rendering to improve website performance and SEO.",
+            "Developed a custom GraphQL API using Hygraph to fetch and display blog posts as well as handle user comments.",
+            "Implemented client-side state management using Next.js built-in features to improve website responsiveness.",
+            "Utilized Tailwindcss to create a modern and responsive user interface, improving overall user experience.",
+            "Utilized TypeScript to improve code readability and maintainability."
+        ],
     }
 ]
+
+/*
+gen records
+     keyFeatures: "This project was one of the first times working with the Next.js framework. One of the big changes was the way I approached using middleware functions to protect specific routes. Also, was the first time working with the Spotify API which required some custom logic for authentication. Gen Records is a E-Commerce website focused on Vinyls. Users can search and sort by keywords, genres, and artists as well as add items to their cart and proceed to checkout using Stripe. Administrators have access to a protected dashboard with protected routes for CRUD operations for inventory and user information.",
+*/
