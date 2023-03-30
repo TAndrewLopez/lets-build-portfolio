@@ -5,12 +5,12 @@ import { ProjectData } from "@/types/types";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
-const archived = () => {
+const reddit = () => {
   const [project, setProject] = useState<ProjectData | null>(null);
 
   useEffect(() => {
     const currProject = PROJECT_DATA.find(
-      (project) => project.projectURL === "/archived"
+      (project) => project.projectURL === "/reddit"
     );
     if (currProject) setProject(currProject);
   }, []);
@@ -87,4 +87,4 @@ const archived = () => {
   );
 };
 
-export default archived;
+export default reddit;

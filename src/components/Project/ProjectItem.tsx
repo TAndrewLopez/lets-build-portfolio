@@ -3,13 +3,13 @@ import Link from "next/link";
 
 interface ProjectItemProps {
   title: string;
-  bgImage: StaticImageData;
+  screenshot: StaticImageData;
   projectURL: string;
   technologies: Array<string>;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({
-  bgImage,
+  screenshot,
   title,
   projectURL,
   technologies,
@@ -17,7 +17,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   return (
     <div className="relative flex items-center justify-center w-full h-auto shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
       <Image
-        src={bgImage}
+        src={screenshot}
         alt="project-image"
         className="rounded-xl group-hover:opacity-10"
         priority
